@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import Error from "./Error"; // Assuming the Error component is in the same folder
-
+import Error from "./Error";
 const Weather = () => {
   const [searchData, setSearchData] = useState("");
   const [weatherData, setWeatherData] = useState({});
@@ -38,18 +37,15 @@ const Weather = () => {
       requiredWeatherData.showLoadingState = false;
       requiredWeatherData.isError = false;
 
-      // Update weather data
       setWeatherData(requiredWeatherData);
-      setError(""); // Clear any previous errors
-
-      // Update history
+      setError("");
       setHistory((prevHistory) => {
         const updatedHistory = [...prevHistory];
         if (!updatedHistory.includes(requiredWeatherData.cityName)) {
           if (updatedHistory.length < 5) {
             updatedHistory.push(requiredWeatherData.cityName);
           } else {
-            updatedHistory.shift(); // Remove the first (oldest) entry
+            updatedHistory.shift();
             updatedHistory.push(requiredWeatherData.cityName);
           }
         }
@@ -63,7 +59,6 @@ const Weather = () => {
 
   return (
     <div className="h-lvh w-full bg-blue-300">
-      {/* If there's an error, render the Error component */}
       {error ? (
         <Error />
       ) : (
@@ -148,7 +143,6 @@ const Weather = () => {
             </div>
           </div>
 
-          {/* Display history */}
           {history.length > 0 && (
             <div className="p-4 bg-white mt-6 rounded-lg shadow-md">
               <h3 className="text-lg font-bold">Recent Searches</h3>
@@ -159,7 +153,7 @@ const Weather = () => {
                     className="text-blue-500 cursor-pointer"
                     onClick={() => {
                       setSearchData(city);
-                      weatherDetails(city); // Fetch weather for clicked city
+                      weatherDetails(city);
                     }}
                   >
                     {city}
