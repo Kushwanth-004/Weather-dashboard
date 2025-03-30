@@ -1,12 +1,32 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A weather application that provides real-time weather information and a 5-day forecast for any city, along with recent search history. This app supports dark mode and displays detailed weather information using OpenWeatherMap API.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**: React.js
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks (`useState`, `useEffect`)
+- **HTTP Requests**: Axios
+- **API**: OpenWeatherMap API
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Real-time Weather**: Get current weather conditions for a city.
+- **5-Day Forecast**: View a detailed 5-day weather forecast.
+- **Recent Searches**: Automatically saves the last 5 cities searched for quick access.
+- **Dark Mode**: Toggle between light and dark modes.
+
+## Setup Instructions
+
+### Prerequisites
+
+- **Node.js**: Ensure you have Node.js installed (v14.x or later recommended).
+- **npm**: Node Package Manager comes with Node.js, but ensure you have it updated to the latest version.
+
+### Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/yourusername/weather-app.git
